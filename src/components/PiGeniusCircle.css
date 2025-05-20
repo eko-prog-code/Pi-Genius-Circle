@@ -1,0 +1,130 @@
+.pi-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    overflow-x: hidden;
+  }
+  
+  .pi-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .pi-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .pi-section {
+    margin-top: 20px;
+  }
+  
+  .pi-package {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .pi-membership {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .pi-description {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .pi-benefits {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .pi-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .pi-list li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  .pi-join {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .pi-send {
+    margin-top: 8px;
+    font-weight: 500;
+  }
+  
+  .pi-copy-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .pi-address {
+    font-size: 14px;
+    word-break: break-all;
+    flex-grow: 1;
+  }
+  
+  .pi-copy-btn {
+    margin-left: 10px;
+    padding: 6px 12px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .pi-qr {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  /* Mobile-specific adjustments */
+  @media (max-width: 600px) {
+    .pi-container {
+      padding: 16px;
+    }
+  
+    .pi-title {
+      font-size: 20px;
+    }
+  
+    .pi-copy-btn {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  
+    .pi-copy-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
