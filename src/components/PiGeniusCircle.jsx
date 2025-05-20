@@ -41,8 +41,20 @@ const PiGeniusCircle = () => {
           </button>
         </div>
 
-        {/* This will load public/PiQR.png */}
+        {/* QR Code from public/PiQR.png */}
         <img src="/PiQR.png" alt="QR Code" className="pi-qr" />
+
+        {/* Balance button */}
+        <div className="pi-balance-container">
+          <a
+            href="https://blockexplorer.minepi.com/mainnet/accounts/GB5SVZCTCCLAHWICTXM7XL74X3FXWNC6VDDJ3QQX53P4BLTNXATZDYNO"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pi-balance-btn"
+          >
+            Balance Pi Public
+          </a>
+        </div>
       </div>
     </div>
   );
