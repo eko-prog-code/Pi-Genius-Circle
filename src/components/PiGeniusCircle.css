@@ -1,130 +1,210 @@
 .pi-container {
+  width: 100%;
+  max-width: 700px;        /* a bit wider on desktop */
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.pi-title {
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.pi-subtitle {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-neon);
+}
+
+.pi-package {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pi-membership {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.pi-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pi-benefits {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.pi-list {
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.pi-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.pi-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-neon);
+}
+
+.pi-copy-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(0,0,0,0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.pi-address {
+  flex: 1;
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+}
+
+.pi-copy-btn {
+  background: transparent;
+  border: 2px solid var(--accent-neon);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.pi-copy-btn:hover {
+  background: var(--accent-neon);
+  color: #000;
+}
+
+.pi-qr {
+  display: block;
+  max-width: 200px;
+  margin: 1.5rem auto;
+  border: 4px solid var(--accent-neon);
+  border-radius: 12px;
+}
+
+.pi-balance-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pi-balance-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent-neon);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pi-balance-btn:hover {
+  background: var(--accent-neon);
+  color: #000;
+}
+
+/* divider */
+.pi-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 2rem 0 1.5rem;
+}
+
+/* USDT-Tether section */
+.pi-usdt-section {
+  text-align: center;
+}
+
+.pi-usdt-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--accent-neon);
+}
+
+.pi-usdt-address {
+  flex: 1;
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+}
+
+.pi-usdt-copy-btn {
+  background: transparent;
+  border: 2px solid var(--accent-neon);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.pi-usdt-copy-btn:hover {
+  background: var(--accent-neon);
+  color: #000;
+}
+
+.pi-usdt-qr {
+  display: block;
+  max-width: 200px;
+  margin: 1.5rem auto 0;
+  border: 4px solid var(--accent-neon);
+  border-radius: 12px;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .pi-container { padding: 1rem; }
+  .pi-title { font-size: 1.8rem; }
+  .pi-subtitle { font-size: 0.9rem; }
+  .pi-qr { max-width: 150px; }
+  .pi-copy-btn, .pi-usdt-copy-btn, .pi-balance-btn {
     width: 100%;
-    max-width: 700px;        /* a bit wider on desktop */
-    margin: 0 auto;
-    padding: 2rem;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-  }
-  
-  .pi-title {
-    font-size: 2.5rem;
-    text-align: center;
-    letter-spacing: 2px;
-  }
-  
-  .pi-subtitle {
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--accent-neon);
-  }
-  
-  .pi-package {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .pi-membership {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .pi-description {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .pi-benefits {
-    margin-top: 1.5rem;
-    font-size: 1.25rem;
-  }
-  
-  .pi-list {
-    margin: 1rem 0;
-    list-style: none;
-  }
-  
-  .pi-list li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-  
-  .pi-list li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--accent-neon);
-  }
-  
-  .pi-copy-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    background: rgba(0,0,0,0.3);
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0;
-  }
-  
-  .pi-address {
-    flex: 1;
-    word-break: break-all;
-    font-family: 'Courier New', monospace;
-    color: #fff;
-  }
-  
-  .pi-copy-btn {
-    background: transparent;
-    border: 2px solid var(--accent-neon);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-weight: bold;
-  }
-  
-  .pi-copy-btn:hover {
-    background: var(--accent-neon);
-    color: #000;
-  }
-  
-  .pi-qr {
-    display: block;
-    max-width: 200px;
-    margin: 1.5rem auto;
-    border: 4px solid var(--accent-neon);
-    border-radius: 12px;
-  }
-  
-  .pi-balance-container {
-    text-align: center;
     margin-top: 1rem;
   }
-  
-  .pi-balance-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--accent-neon);
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+  .pi-usdt-qr { max-width: 150px; }
+}
+
+/* Balance USDT Tether Public button */
+.pi-balance-usdt-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pi-balance-usdt-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--accent-neon);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.pi-balance-usdt-btn:hover {
+  background: var(--accent-neon);
+  color: #000;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .pi-balance-usdt-btn {
+    width: 100%;
+    margin-top: 1rem;
   }
-  
-  .pi-balance-btn:hover {
-    background: var(--accent-neon);
-    color: #000;
-  }
-  
-  /* Mobile tweak */
-  @media (max-width: 600px) {
-    .pi-container { padding: 1rem; }
-    .pi-title { font-size: 1.8rem; }
-    .pi-subtitle { font-size: 0.9rem; }
-    .pi-qr { max-width: 150px; }
-  }
-  
+}
