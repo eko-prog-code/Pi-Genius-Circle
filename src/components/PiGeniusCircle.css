@@ -208,3 +208,38 @@
     margin-top: 1rem;
   }
 }
+
+.pi-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+.products-divider {
+  border: none;
+  height: 4px;
+  background-color: #ccc;
+  margin: 2rem 0;
+}
+
+.products-section {
+  text-align: center;
+}
+
+.products-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.products-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.products-images img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}

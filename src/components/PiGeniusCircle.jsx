@@ -105,7 +105,6 @@ const PiGeniusCircle = () => {
             className="pi-usdt-qr"
           />
 
-          {/* NEW: Balance USDT Tether Public */}
           <div className="pi-balance-usdt-container">
             <a
               href={`https://www.oklink.com/usdt/address/${usdtAddress}`}
@@ -115,6 +114,17 @@ const PiGeniusCircle = () => {
             >
               Balance USDT Tether Public
             </a>
+          </div>
+        </div>
+
+        {/* Products Section */}
+        <hr className="products-divider" />
+        <div className="products-section">
+          <h3 className="products-title">Our Products</h3>
+          <div className="products-images">
+            <img src="/produk1.png" alt="Produk 1" />
+            <img src="/produk2.png" alt="Produk 2" />
+            <img src="/produk3.png" alt="Produk 3" />
           </div>
         </div>
       </div>
