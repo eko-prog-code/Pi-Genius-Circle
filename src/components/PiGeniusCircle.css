@@ -1,6 +1,6 @@
 .pi-container {
   width: 100%;
-  max-width: 700px;        /* a bit wider on desktop */
+  max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
   background: var(--glass-bg);
@@ -73,71 +73,7 @@
   margin: 1rem 0;
 }
 
-.pi-address {
-  flex: 1;
-  word-break: break-all;
-  font-family: 'Courier New', monospace;
-  color: #fff;
-}
-
-.pi-copy-btn {
-  background: transparent;
-  border: 2px solid var(--accent-neon);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.pi-copy-btn:hover {
-  background: var(--accent-neon);
-  color: #000;
-}
-
-.pi-qr {
-  display: block;
-  max-width: 200px;
-  margin: 1.5rem auto;
-  border: 4px solid var(--accent-neon);
-  border-radius: 12px;
-}
-
-.pi-balance-container {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.pi-balance-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--accent-neon);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.pi-balance-btn:hover {
-  background: var(--accent-neon);
-  color: #000;
-}
-
-/* divider */
-.pi-divider {
-  border: none;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  margin: 2rem 0 1.5rem;
-}
-
-/* USDT-Tether section */
-.pi-usdt-section {
-  text-align: center;
-}
-
-.pi-usdt-title {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: var(--accent-neon);
-}
-
+.pi-address,
 .pi-usdt-address {
   flex: 1;
   word-break: break-all;
@@ -145,74 +81,47 @@
   color: #fff;
 }
 
-.pi-usdt-copy-btn {
+.pi-copy-btn,
+.pi-usdt-copy-btn,
+.pi-balance-btn,
+.pi-balance-usdt-btn {
   background: transparent;
   border: 2px solid var(--accent-neon);
   padding: 0.5rem 1rem;
   border-radius: 8px;
   font-weight: bold;
-  transition: background 0.2s;
-}
-
-.pi-usdt-copy-btn:hover {
-  background: var(--accent-neon);
-  color: #000;
-}
-
-.pi-usdt-qr {
-  display: block;
-  max-width: 200px;
-  margin: 1.5rem auto 0;
-  border: 4px solid var(--accent-neon);
-  border-radius: 12px;
-}
-
-/* Mobile tweak */
-@media (max-width: 600px) {
-  .pi-container { padding: 1rem; }
-  .pi-title { font-size: 1.8rem; }
-  .pi-subtitle { font-size: 0.9rem; }
-  .pi-qr { max-width: 150px; }
-  .pi-copy-btn, .pi-usdt-copy-btn, .pi-balance-btn {
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .pi-usdt-qr { max-width: 150px; }
-}
-
-/* Balance USDT Tether Public button */
-.pi-balance-usdt-container {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.pi-balance-usdt-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--accent-neon);
-  border-radius: 8px;
+  cursor: pointer;
   text-decoration: none;
-  font-weight: 600;
   transition: background 0.2s;
 }
 
+.pi-copy-btn:hover,
+.pi-usdt-copy-btn:hover,
+.pi-balance-btn:hover,
 .pi-balance-usdt-btn:hover {
   background: var(--accent-neon);
   color: #000;
 }
 
-/* Mobile tweak */
-@media (max-width: 600px) {
-  .pi-balance-usdt-btn {
-    width: 100%;
-    margin-top: 1rem;
-  }
+.pi-qr,
+.pi-usdt-qr {
+  display: block;
+  max-width: 200px;
+  margin: 1.5rem auto;
+  border: 4px solid var(--accent-neon);
+  border-radius: 12px;
+}
+
+.pi-balance-container,
+.pi-balance-usdt-container {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .pi-divider {
   border: none;
-  border-top: 1px solid #ccc;
-  margin: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin: 2rem 0 1.5rem;
 }
 
 .products-divider {
@@ -242,4 +151,29 @@
   height: auto;
   object-fit: contain;
   border-radius: 8px;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 600px) {
+  .pi-container { padding: 1rem; }
+  .pi-title { font-size: 1.8rem; }
+  .pi-subtitle { font-size: 0.9rem; }
+  .pi-qr,
+  .pi-usdt-qr { max-width: 150px; }
+  .pi-copy-btn,
+  .pi-usdt-copy-btn,
+  .pi-balance-btn,
+  .pi-balance-usdt-btn { width: 100%; margin-top: 1rem; }
+
+  /* Stack product images vertically */
+  .products-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .products-images img {
+    width: 100%;
+    max-width: 400px;
+  }
 }
