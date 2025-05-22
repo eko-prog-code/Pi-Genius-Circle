@@ -49,7 +49,7 @@ const PiGeniusCircle = () => {
       <p className="pi-subtitle">Komunitas privat bagi pemikir, kreator, dan visioner.</p>
 
       <div className="pi-section">
-      <img src="/Pi Flow.jpeg" alt="Pi Flow" className="pi-flow-image" />
+      <img src="/Pi Flow.webp" alt="Pi Flow" className="pi-flow-image" />
         {/* Pi Section */}
         <h2 className="pi-package">Keyholder Package</h2>
         <p className="pi-membership">5,000 Pi Membership</p>
