@@ -177,3 +177,16 @@
     max-width: 400px;
   }
 }
+
+.pi-account-stats-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pi-account-stats-container .pi-balance-btn {
+  margin-top: 20px;
+}
+
+.pi-section > .pi-balance-container + .pi-balance-container {
+  margin-top: 20px;
+}

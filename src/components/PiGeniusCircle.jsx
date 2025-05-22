@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import './PiGeniusCircle.css';
 
 const PiGeniusCircle = () => {
-  const piAddress   = 'GB5SVZCTCCLAHWICTXM7XL74X3FXWNC6VDDJ3QQX53P4BLTNXATZDYNO';
+  const piAddress = 'GB5SVZCTCCLAHWICTXM7XL74X3FXWNC6VDDJ3QQX53P4BLTNXATZDYNO';
   const usdtAddress = '0x8c88123c89f8c74d009340a9fce69e9db7e60cf1';
 
-  const [copiedPi, setCopiedPi]     = useState(false);
+  const [copiedPi, setCopiedPi] = useState(false);
   const [copiedUsdt, setCopiedUsdt] = useState(false);
 
   // universal copy helper with fallback
@@ -15,7 +15,7 @@ const PiGeniusCircle = () => {
       try {
         await navigator.clipboard.writeText(text);
         return true;
-      } catch {}
+      } catch { }
     }
     const ta = document.createElement('textarea');
     ta.value = text;
@@ -84,6 +84,18 @@ const PiGeniusCircle = () => {
             className="pi-balance-btn"
           >
             Balance Pi Public
+          </a>
+        </div>
+
+        {/* Tambahkan tombol Pi Account Statistics di sini */}
+        <div className="pi-account-stats-container">
+          <a
+            href="https://piscan.io/account-stats"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pi-balance-btn"
+          >
+            ⛓️ Pi Account Statistics
           </a>
         </div>
 
