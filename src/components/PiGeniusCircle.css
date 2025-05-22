@@ -190,3 +190,14 @@
 .pi-section > .pi-balance-container + .pi-balance-container {
   margin-top: 20px;
 }
+
+.pi-flow-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  border: 3px solid #00bfff; /* biru muda */
+  box-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff; /* efek glow bercahaya */
+}
